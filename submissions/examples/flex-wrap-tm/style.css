@@ -1,0 +1,205 @@
+/* ── Reset ─────────────────────────────────────── */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  background: var(--ease-color-bg);
+  color: var(--ease-color-text);
+  font-family: var(--ease-font-sans);
+  line-height: var(--ease-leading-normal);
+}
+
+.container {
+  width: 100%;
+  max-width: var(--ease-container-max);
+  padding: var(--ease-space-8);
+}
+
+h1 {
+  font-size: var(--ease-text-3xl);
+  font-weight: 700;
+  color: var(--ease-color-text);
+  margin-bottom: var(--ease-space-4);
+}
+
+.subtitle {
+  font-size: var(--ease-text-base);
+  color: var(--ease-color-muted);
+  margin-bottom: var(--ease-space-8);
+}
+
+.demo-grid {
+  display: grid;
+  gap: var(--ease-space-6);
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  margin-bottom: var(--ease-space-8);
+}
+
+.demo-card {
+  background: var(--ease-color-surface);
+  border-radius: var(--ease-radius-lg);
+  padding: var(--ease-space-6);
+  box-shadow: var(--ease-shadow-md);
+  border: 1px solid var(--ease-color-neutral-200);
+  text-align: center;
+  transition: box-shadow var(--ease-speed-medium) var(--ease-ease),
+              transform var(--ease-speed-medium) var(--ease-ease);
+  min-height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.demo-card:hover {
+  box-shadow: var(--ease-shadow-xl);
+  transform: translateY(-2px);
+}
+
+.demo-label {
+  font-size: var(--ease-text-sm);
+  color: var(--ease-color-muted);
+  margin-top: var(--ease-space-2);
+}
+
+/* Flex Wrap — sm */
+.flex-wrap {
+  padding: var(--ease-space-2); background: var(--ease-color-neutral-100); border-radius: var(--ease-radius-sm);
+}
+
+/* Flex Wrap — md */
+.flex-wrap-md {
+  padding: var(--ease-space-4); background: var(--ease-color-primary-alpha); border-radius: var(--ease-radius-md);
+}
+
+/* Flex Wrap — lg */
+.flex-wrap-lg {
+  padding: var(--ease-space-6); background: var(--ease-color-secondary-alpha); border-radius: var(--ease-radius-lg);
+}
+
+/* Flex Wrap — xl */
+.flex-wrap-xl {
+  padding: var(--ease-space-8); background: var(--ease-color-success-alpha); border-radius: var(--ease-radius-xl);
+}
+
+/* Hover variant */
+.flex-wrap-hover:hover {
+  background: var(--ease-color-primary); color: white; transition: background var(--ease-speed-medium) var(--ease-ease);
+}
+
+/* Focus variant */
+.flex-wrap-focus:focus {
+  outline: 2px solid var(--ease-color-info); outline-offset: 2px;
+}
+
+/* Active variant */
+.flex-wrap-active:active {
+  transform: scale(0.97); transition: transform var(--ease-speed-fast) var(--ease-ease);
+}
+
+/* Success color variant */
+.flex-wrap-success {
+  background: var(--ease-color-success-alpha); border-left: 3px solid var(--ease-color-success);
+}
+
+/* Danger color variant */
+.flex-wrap-danger {
+  background: var(--ease-color-danger-alpha); border-left: 3px solid var(--ease-color-danger);
+}
+
+/* Warning color variant */
+.flex-wrap-warning {
+  background: var(--ease-color-warning-alpha); border-left: 3px solid var(--ease-color-warning);
+}
+
+/* Info color variant */
+.flex-wrap-info {
+  background: var(--ease-color-primary-alpha); border-left: 3px solid var(--ease-color-info);
+}
+
+/* Bordered variant */
+.flex-wrap-bordered {
+  border: 2px solid var(--ease-color-primary); background: transparent;
+}
+
+/* Gradient variant */
+.flex-wrap-gradient {
+  background: linear-gradient(135deg, var(--ease-color-primary), var(--ease-color-secondary)); color: white;
+}
+
+/* Disabled state */
+.flex-wrap-disabled {
+  opacity: 0.5; cursor: not-allowed; pointer-events: none;
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Full-width variant */
+.flex-wrap-full {
+  width: 100%;
+  width: 100%;
+}
+
+/* Pill variant */
+.flex-wrap-pill {
+  border-radius: var(--ease-radius-full); padding: var(--ease-space-2) var(--ease-space-6);
+  border-radius: var(--ease-radius-full);
+}
+
+/* Inset variant */
+.flex-wrap-inset {
+  box-shadow: inset var(--ease-shadow-md); border-radius: var(--ease-radius-md);
+  box-shadow: inset var(--ease-shadow-md);
+}
+
+/* Glow variant */
+.flex-wrap-glow {
+  box-shadow: var(--ease-glow-primary);
+  box-shadow: var(--ease-glow-primary);
+}
+
+/* Responsive — tablet */
+@media (min-width: 768px) {
+  .demo-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  h1 { font-size: var(--ease-text-4xl); }
+}
+
+/* Responsive — desktop */
+@media (min-width: 1024px) {
+  .demo-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  .demo-card {
+    background: var(--ease-color-surface);
+    border-color: var(--ease-color-neutral-700);
+  }
+  h1 { color: var(--ease-color-text); }
+  .subtitle { color: var(--ease-color-muted); }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .demo-card,
+  .flex-wrap,
+  .flex-wrap-md,
+  .flex-wrap-lg,
+  .flex-wrap-xl,
+  .flex-wrap-hover,
+  .flex-wrap-focus,
+  .flex-wrap-active {
+    transition: none;
+    animation: none;
+  }
+  .flex-wrap-disabled {
+    opacity: 0.6;
+  }
+}
