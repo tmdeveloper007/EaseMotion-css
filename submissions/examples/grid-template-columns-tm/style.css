@@ -1,0 +1,205 @@
+/* ── Reset ─────────────────────────────────────── */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  background: var(--ease-color-bg);
+  color: var(--ease-color-text);
+  font-family: var(--ease-font-sans);
+  line-height: var(--ease-leading-normal);
+}
+
+.container {
+  width: 100%;
+  max-width: var(--ease-container-max);
+  padding: var(--ease-space-8);
+}
+
+h1 {
+  font-size: var(--ease-text-3xl);
+  font-weight: 700;
+  color: var(--ease-color-text);
+  margin-bottom: var(--ease-space-4);
+}
+
+.subtitle {
+  font-size: var(--ease-text-base);
+  color: var(--ease-color-muted);
+  margin-bottom: var(--ease-space-8);
+}
+
+.demo-grid {
+  display: grid;
+  gap: var(--ease-space-6);
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  margin-bottom: var(--ease-space-8);
+}
+
+.demo-card {
+  background: var(--ease-color-surface);
+  border-radius: var(--ease-radius-lg);
+  padding: var(--ease-space-6);
+  box-shadow: var(--ease-shadow-md);
+  border: 1px solid var(--ease-color-neutral-200);
+  text-align: center;
+  transition: box-shadow var(--ease-speed-medium) var(--ease-ease),
+              transform var(--ease-speed-medium) var(--ease-ease);
+  min-height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.demo-card:hover {
+  box-shadow: var(--ease-shadow-xl);
+  transform: translateY(-2px);
+}
+
+.demo-label {
+  font-size: var(--ease-text-sm);
+  color: var(--ease-color-muted);
+  margin-top: var(--ease-space-2);
+}
+
+/* Grid Template Columns — sm */
+.grid-template-columns {
+  padding: var(--ease-space-4); gap: var(--ease-space-1);
+}
+
+/* Grid Template Columns — md */
+.grid-template-columns-md {
+  padding: var(--ease-space-4); gap: var(--ease-space-4);
+}
+
+/* Grid Template Columns — lg */
+.grid-template-columns-lg {
+  padding: var(--ease-space-4); gap: var(--ease-space-6);
+}
+
+/* Grid Template Columns — xl */
+.grid-template-columns-xl {
+  padding: var(--ease-space-4); gap: var(--ease-space-8);
+}
+
+/* Hover variant */
+.grid-template-columns-hover:hover {
+  padding: var(--ease-space-4); gap: var(--ease-space-4); transition: gap var(--ease-speed-medium) var(--ease-ease);
+}
+
+/* Focus variant */
+.grid-template-columns-focus:focus {
+  padding: var(--ease-space-4); gap: var(--ease-space-6); outline: 2px solid var(--ease-color-info);
+}
+
+/* Active variant */
+.grid-template-columns-active:active {
+  padding: var(--ease-space-4); gap: var(--ease-space-8);
+}
+
+/* Success color variant */
+.grid-template-columns-success {
+  padding: var(--ease-space-4); gap: var(--ease-space-4); background: var(--ease-color-success-alpha);
+}
+
+/* Danger color variant */
+.grid-template-columns-danger {
+  padding: var(--ease-space-4); gap: var(--ease-space-4); background: var(--ease-color-danger-alpha);
+}
+
+/* Warning color variant */
+.grid-template-columns-warning {
+  padding: var(--ease-space-4); gap: var(--ease-space-4); background: var(--ease-color-warning-alpha);
+}
+
+/* Info color variant */
+.grid-template-columns-info {
+  padding: var(--ease-space-4); gap: var(--ease-space-4); background: var(--ease-color-primary-alpha);
+}
+
+/* Bordered variant */
+.grid-template-columns-bordered {
+  padding: var(--ease-space-4); gap: var(--ease-space-4); border: 2px solid var(--ease-color-primary);
+}
+
+/* Gradient variant */
+.grid-template-columns-gradient {
+  padding: var(--ease-space-4); gap: var(--ease-space-4); background: linear-gradient(135deg, var(--ease-color-primary-alpha), var(--ease-color-secondary-alpha));
+}
+
+/* Disabled state */
+.grid-template-columns-disabled {
+  padding: var(--ease-space-4); gap: var(--ease-space-2); opacity: 0.5;
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Full-width variant */
+.grid-template-columns-full {
+  padding: var(--ease-space-4); gap: var(--ease-space-8); width: 100%;
+  width: 100%;
+}
+
+/* Pill variant */
+.grid-template-columns-pill {
+  padding: var(--ease-space-4); gap: var(--ease-space-2); border-radius: var(--ease-radius-full);
+  border-radius: var(--ease-radius-full);
+}
+
+/* Inset variant */
+.grid-template-columns-inset {
+  padding: var(--ease-space-4); gap: var(--ease-space-4); box-shadow: inset var(--ease-shadow-md);
+  box-shadow: inset var(--ease-shadow-md);
+}
+
+/* Glow variant */
+.grid-template-columns-glow {
+  padding: var(--ease-space-4); gap: var(--ease-space-4); box-shadow: var(--ease-glow-primary);
+  box-shadow: var(--ease-glow-primary);
+}
+
+/* Responsive — tablet */
+@media (min-width: 768px) {
+  .demo-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  h1 { font-size: var(--ease-text-4xl); }
+}
+
+/* Responsive — desktop */
+@media (min-width: 1024px) {
+  .demo-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  .demo-card {
+    background: var(--ease-color-surface);
+    border-color: var(--ease-color-neutral-700);
+  }
+  h1 { color: var(--ease-color-text); }
+  .subtitle { color: var(--ease-color-muted); }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .demo-card,
+  .grid-template-columns,
+  .grid-template-columns-md,
+  .grid-template-columns-lg,
+  .grid-template-columns-xl,
+  .grid-template-columns-hover,
+  .grid-template-columns-focus,
+  .grid-template-columns-active {
+    transition: none;
+    animation: none;
+  }
+  .grid-template-columns-disabled {
+    opacity: 0.6;
+  }
+}
