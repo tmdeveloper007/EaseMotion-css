@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <title>EaseMotion CSS - Animation Classes Demo</title>
+  <style>
+    body { font-family: system-ui, -apple-system, sans-serif; max-width: 960px; margin: 0 auto; padding: 3rem 2rem; background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%); min-height: 100vh; color: #e2e8f0; }
+    h1 { color: #ffffff; font-size: 2.25rem; font-weight: 700; margin-bottom: 0.5rem; letter-spacing: -0.02em; }
+    .subtitle { color: #94a3b8; font-size: 1.1rem; margin-bottom: 2.5rem; line-height: 1.6; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1.5rem; margin-bottom: 3rem; }
+    .card { background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 16px; padding: 1.5rem; text-align: center; transition: transform 0.2s ease, box-shadow 0.2s ease; }
+    .card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0, 210, 255, 0.15); }
+    .box { width: 72px; height: 72px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 12px; margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem; font-weight: 700; }
+    code { background: rgba(255, 255, 255, 0.08); padding: 0.25em 0.6em; border-radius: 6px; font-size: 0.8rem; color: #00d2ff; font-family: 'SF Mono', Consolas, monospace; }
+    .info { background: rgba(0, 210, 255, 0.08); border: 1px solid rgba(0, 210, 255, 0.2); border-radius: 12px; padding: 1.5rem; margin-top: 2rem; }
+    .info h2 { color: #00d2ff; font-size: 1.1rem; margin-bottom: 0.75rem; }
+    .info p { color: #94a3b8; line-height: 1.7; margin: 0; }
+  </style>
+</head>
+<body>
+  <h1>EaseMotion CSS Animations</h1>
+  <p class='subtitle'>A curated collection of smooth CSS animation classes for modern web interfaces.</p>
+  <div class='grid'>
+    <div class='card'><div class='box ease-fade-in'>1</div><code>ease-fade-in</code></div>
+    <div class='card'><div class='box ease-scale-in'>2</div><code>ease-scale-in</code></div>
+    <div class='card'><div class='box ease-slide-up'>3</div><code>ease-slide-up</code></div>
+    <div class='card'><div class='box ease-bounce-in'>4</div><code>ease-bounce-in</code></div>
+    <div class='card'><div class='box ease-zoom-in'>5</div><code>ease-zoom-in</code></div>
+    <div class='card'><div class='box ease-pulse'>6</div><code>ease-pulse</code></div>
+    <div class='card'><div class='box ease-glow'>7</div><code>ease-glow</code></div>
+    <div class='card'><div class='box ease-spin'>8</div><code>ease-spin</code></div>
+    <div class='card'><div class='box ease-blur-in'>9</div><code>ease-blur-in</code></div>
+    <div class='card'><div class='box ease-expand-in'>10</div><code>ease-expand-in</code></div>
+    <div class='card'><div class='box ease-flip-in'>11</div><code>ease-flip-in</code></div>
+    <div class='card'><div class='box ease-tada'>12</div><code>ease-tada</code></div>
+    <div class='card'><div class='box ease-shake'>13</div><code>ease-shake</code></div>
+    <div class='card'><div class='box ease-heartbeat'>14</div><code>ease-heartbeat</code></div>
+    <div class='card'><div class='box ease-light-speed-in'>15</div><code>ease-light-speed-in</code></div>
+  </div>
+  <div class='info'>
+    <h2>How to use</h2>
+    <p>Add the stylesheet and apply animation classes to any element. Customize duration with CSS variables like --animation-duration-slow. All animations are hardware-accelerated and smooth.</p>
+  </div>
+  <div class='info'>
+    <h2>Animation Categories</h2>
+    <p>EaseMotion CSS covers entrance, attention, exit, and special animation effects. All classes use hardware-accelerated transforms for smooth 60fps performance.</p>
+  </div>
+  <div class='info'>
+    <h2>Custom Properties</h2>
+    <p>Override timing and colors globally: --animation-duration-slow: 1s, --glow: #ff6b6b. See the CSS file for all available variables.</p>
+  </div>
+</body>
+</html>
