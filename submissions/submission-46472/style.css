@@ -1,0 +1,23 @@
+/* Enhancement: Add CSS Blur-Entrance Popover for Minimalist Te (#46472) */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+:root {
+  --tm-primary: #6366f1;
+  --tm-secondary: #34d399;
+  --tm-radius: 12px;
+  --tm-size: 140px;
+}
+
+/* Animation style */
+.tm-demo {animation-name: ease-slide;}
+.tm-demo.linear {animation-timing-function: linear;}
+.tm-demo.ease {animation-timing-function: ease;}
+.tm-btn { padding: 0.75rem 1.5rem; border: 2px solid #6366f1; background: #6366f1; color: white; border-radius: 8px; }
+.tm-container { display: flex; flex-wrap: wrap; gap: 1.5rem; padding: 2rem; justify-content: center; }
+@keyframes ease-slide {
+  0% { transform: scale(0.8) rotate(0deg); opacity: 0.7; }
+  50% { transform: scale(1.05) rotate(2deg); opacity: 1; }
+  100% { transform: scale(1) rotate(0deg); opacity: 1; }
+}
+
+.tm-label { font-size: 0.7rem; color: rgba(255,255,255,0.8); }
