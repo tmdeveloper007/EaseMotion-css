@@ -1,0 +1,39 @@
+/* EaseMotion CSS - Animation Library */
+/* Submission: animation enhancement */
+@keyframes ease-fade-in { from{opacity:0} to{opacity:1}{
+@keyframes ease-fade-out { from{opacity:1} to{opacity:0}{
+@keyframes ease-fade-in-up { from{opacity:0{{transform:translateY(20px)}to{opacity:1{{transform:translateY(0)}{
+@keyframes ease-fade-in-down { from{opacity:0{{transform:translateY(-20px)}to{opacity:1{{transform:translateY(0)}{
+@keyframes ease-fade-in-left { from{opacity:0{{transform:translateX(-30px)}to{opacity:1{{transform:translateX(0)}{
+@keyframes ease-fade-in-right { from{opacity:0{{transform:translateX(30px)}to{opacity:1{{transform:translateX(0)}{
+@keyframes ease-scale-in { from{opacity:0{{transform:scale(0.8)}to{opacity:1{{transform:scale(1)}{
+@keyframes ease-scale-out { from{opacity:1{{transform:scale(1)}to{opacity:0{{transform:scale(1.1)}{
+@keyframes ease-bounce-in { 0%{{opacity:0{{transform:scale(0.3)}50%{{transform:scale(1.05)}70%{{transform:scale(0.9)}100%{{opacity:1{{transform:scale(1)}{
+@keyframes ease-slide-up { from{{transform:translateY(100%)}to{{transform:translateY(0)}{
+@keyframes ease-slide-down { from{{transform:translateY(-100%)}to{{transform:translateY(0)}{
+@keyframes ease-spin { from{{transform:rotate(0deg)}to{{transform:rotate(360deg)}{
+@keyframes ease-pulse { 0%,100%{{opacity:1{{transform:scale(1)}50%{{opacity:0.7{{transform:scale(1.05)}{
+@keyframes ease-glow { 0%,100%{{box-shadow:0 0 5px var(--glow,#00d2ff)}50%{{box-shadow:0 0 25px var(--glow,#00d2ff)}{
+@keyframes ease-flip-in { from{{opacity:0{{transform:perspective(400px) rotateX(90deg)}to{{opacity:1{{transform:perspective(400px) rotateX(0)}{
+@keyframes ease-zoom-in { from{{opacity:0{{transform:scale(0.3)}to{{opacity:1{{transform:scale(1)}{
+@keyframes ease-shake { 0%,100%{{transform:translateX(0)}20%{{transform:translateX(-8px)}40%{{transform:translateX(8px)}60%{{transform:translateX(-4px)}80%{{transform:translateX(4px)}{
+--ease-dur-fast:0.2s; --ease-dur-normal:0.4s; --ease-dur-slow:0.8s; --ease-dur-slower:1.2s; --ease-dur-slowest:2s;
+--fade-tm:ease-out; --slide-tm:cubic-bezier(0.25,0.46,0.45,0.94); --bounce-tm:cubic-bezier(0.68,-0.55,0.265,1.55);
+--glow:#00d2ff; --hue-1:210deg; --hue-2:340deg;
+.ease-fade-in { animation:ease-fade-in var(--ease-dur-normal,0.4s) var(--fade-tm) both{
+.ease-fade-out { animation:ease-fade-out var(--ease-dur-normal,0.4s) var(--fade-tm) both{
+.ease-fade-in-up { animation:ease-fade-in-up var(--ease-dur-normal,0.4s) var(--fade-tm) both{
+.ease-fade-in-down { animation:ease-fade-in-down var(--ease-dur-normal,0.4s) var(--fade-tm) both{
+.ease-fade-in-left { animation:ease-fade-in-left var(--ease-dur-normal,0.4s) var(--fade-tm) both{
+.ease-fade-in-right { animation:ease-fade-in-right var(--ease-dur-normal,0.4s) var(--fade-tm) both{
+.ease-scale-in { animation:ease-scale-in var(--ease-dur-normal,0.4s) var(--fade-tm) both{
+.ease-scale-out { animation:ease-scale-out var(--ease-dur-normal,0.4s) var(--fade-tm) both{
+.ease-bounce-in { animation:ease-bounce-in var(--ease-dur-slow,0.8s) var(--bounce-tm) both{
+.ease-slide-up { animation:ease-slide-up var(--ease-dur-slow,0.8s) var(--slide-tm) both{
+.ease-slide-down { animation:ease-slide-down var(--ease-dur-slow,0.8s) var(--slide-tm) both{
+.ease-spin { animation:ease-spin var(--ease-dur-slower,1.2s) linear infinite{
+.ease-pulse { animation:ease-pulse var(--ease-dur-slow,0.8s) ease-in-out infinite{
+.ease-glow { animation:ease-glow var(--ease-dur-slow,0.8s) ease-in-out infinite{
+.ease-flip-in { animation:ease-flip-in var(--ease-dur-slow,0.8s) ease-out both{
+.ease-zoom-in { animation:ease-zoom-in var(--ease-dur-normal,0.4s) ease-out both{
+.ease-shake { animation:ease-shake var(--ease-dur-slow,0.8s) ease-in-out both{
